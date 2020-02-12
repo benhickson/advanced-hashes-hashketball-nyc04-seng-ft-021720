@@ -138,6 +138,8 @@ def num_points_scored(player_name)
   return 'Player not found.'
 end
 
+num_points_scored('param')
+
 
 
 
