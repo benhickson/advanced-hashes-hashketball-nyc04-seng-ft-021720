@@ -289,12 +289,10 @@ def long_name_steals_a_ton?
     end
   end
   
-  p max_steals
-  
   hash.each do |team|
     team[1][:players].each do |player|
-      p player[:steals] == max_steals
       if player[:steals] == max_steals
+        p 'checking'
         player_with_max_steals = player[:player_name]
       end
     end
