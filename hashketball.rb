@@ -196,7 +196,7 @@ def player_stats(player_name)
   return 'Player not found.'
 end
 
-def big_shoe_rebounds(player_name)
+def big_shoe_rebounds
   hash = game_hash
   max_shoe = 0
   
