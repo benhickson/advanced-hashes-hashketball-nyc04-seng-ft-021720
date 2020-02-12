@@ -216,20 +216,20 @@ def big_shoe_rebounds
   
 end
 
-def big_shoe_rebounds
+def most_points_scored
   hash = game_hash
-  max_shoe = 0
+  max_points = 0
   
   hash.each do |team|
     team[1][:players].each do |player|
-      max_shoe = max_shoe > player[:shoe] ? max_shoe : player[:shoe]
+      max_points = max_points > player[:points] ? max_points : player[:points]
     end
   end
   
   hash.each do |team|
     team[1][:players].each do |player|
-      if player[:shoe] == max_shoe
-        return player[:rebounds]
+      if player[:points] == max_points
+        return player[:player_name]
       end
     end
   end  
