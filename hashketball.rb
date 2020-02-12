@@ -151,6 +151,15 @@ def shoe_size(player_name)
   return 'Player not found.'
 end
 
+def team_colors(team_name)
+  game_hash.each do |team|
+    if team[1][:team_name] == team_name
+      team[1][:colors]
+    end
+  end
+  return 'Team not found.'
+end
+
 
 
 
