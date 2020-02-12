@@ -216,6 +216,25 @@ def big_shoe_rebounds
   
 end
 
+def big_shoe_rebounds
+  hash = game_hash
+  max_shoe = 0
+  
+  hash.each do |team|
+    team[1][:players].each do |player|
+      max_shoe = max_shoe > player[:shoe] ? max_shoe : player[:shoe]
+    end
+  end
+  
+  hash.each do |team|
+    team[1][:players].each do |player|
+      if player[:shoe] == max_shoe
+        return player[:rebounds]
+      end
+    end
+  end  
+  
+end
 
 
 
