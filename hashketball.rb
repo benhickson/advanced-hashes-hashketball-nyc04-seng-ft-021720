@@ -18,7 +18,7 @@ def game_hash
           slam_dunks:
         },
         {
-          player_name: '',
+          player_name: 'Reggie Evans',
           number: 0,
           shoe: 0,
           points: 0,
