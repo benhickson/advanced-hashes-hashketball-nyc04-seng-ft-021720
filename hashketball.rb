@@ -293,7 +293,7 @@ def long_name_steals_a_ton?
     team[1][:players].each do |player|
       if player[:steals] == max_steals
         p 'checking'
-        player_with_max_steals = player[:player_name]
+        p player_with_max_steals = player[:player_name]
       end
     end
   end
