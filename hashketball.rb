@@ -208,8 +208,8 @@ def big_shoe_rebounds(player_name)
   
   hash.each do |team|
     team[1][:players].each do |player|
-      if player[:player_name] == player_name
-        return player.reject { |k,v| k == :player_name }
+      if player[:shoe] == max_shoe
+        return player[:rebounds]
       end
     end
   end  
