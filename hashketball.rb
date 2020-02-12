@@ -196,7 +196,25 @@ def player_stats(player_name)
   return 'Player not found.'
 end
 
-
+def big_shoe_rebounds(player_name)
+  hash = game_hash
+  max_shoe = 0
+  
+  hash.each do |team|
+    team[1][:players].each do |player|
+      max_shoe = max_shoe > player[:shoe] ? max_shoe : player[:shoe]
+    end
+  end
+  
+  hash.each do |team|
+    team[1][:players].each do |player|
+      if player[:player_name] == player_name
+        return player.reject { |k,v| k == :player_name }
+      end
+    end
+  end  
+  
+end
 
 
 
