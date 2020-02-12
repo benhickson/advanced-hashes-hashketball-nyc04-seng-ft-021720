@@ -247,7 +247,7 @@ def winning_team
       if counter <= 5 {
         home_points += player[:points]
       } else {
-        away_points += player{:points]
+        away_points += player[:points]
       }
       counter += 1
     end
