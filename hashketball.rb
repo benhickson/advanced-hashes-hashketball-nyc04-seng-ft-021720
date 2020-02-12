@@ -244,7 +244,7 @@ def winning_team
   counter = 1
   hash.each do |team|
     team[1][:players].each do |player|
-      if (counter <=5) {
+      if counter <=5 {
         home_points += player[:points]
       } else {
         away_points += player{:points]
