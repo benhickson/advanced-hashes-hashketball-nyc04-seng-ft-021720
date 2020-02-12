@@ -131,9 +131,10 @@ end
 
 def num_points_scored(player_name)
   game_hash.each do |team|
-    # p team
     team[1][:players].each do |player|
-      p player[:player_name]
+      if player[:player_name] == player_name
+        return player[:points]
+      end
     end
   end
   return 'Player not found.'
