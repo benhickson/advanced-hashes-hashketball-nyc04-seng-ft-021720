@@ -168,6 +168,23 @@ def team_names
   output
 end
 
+def player_numbers(team_name)
+  output = []
+  game_hash.each do |team|
+    if team[1][:team_name] == team_name
+      team[1][:players].each do |player|
+        output.push(player[:number])
+      end
+    end
+  end
+  if output.length > 0
+    output.sort
+    return output
+  else
+    return 'Team not found.'
+  end
+end
+
 
 
 
