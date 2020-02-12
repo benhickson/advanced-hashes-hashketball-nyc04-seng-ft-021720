@@ -185,6 +185,17 @@ def player_numbers(team_name)
   end
 end
 
+def player_stats(player_name)
+  game_hash.each do |team|
+    team[1][:players].each do |player|
+      if player[:player_name] == player_name
+        return player
+      end
+    end
+  end
+  return 'Player not found.'
+end
+
 
 
 
