@@ -153,15 +153,13 @@ end
 
 def team_colors(team_name)
   game_hash.each do |team|
-    p team[1][:team_name]
     if team[1][:team_name] == team_name
-      p team[1][:colors]
+      return team[1][:colors]
     end
   end
   return 'Team not found.'
 end
 
-team_colors("Brooklyn Nets")
 
 
 
